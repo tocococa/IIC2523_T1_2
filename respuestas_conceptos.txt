@@ -1,0 +1,19 @@
+1. Est´an utilizando hardware diferente, pero se ejecutan al mismo tiempo.
+
+2. El tiempo de acceso a la memoria es un cuello de botella del rendimiento.
+
+3. La densidad de los transistores se duplica cada 2 a˜nos
+
+4. Una tarea puede ejecutarse mientras otra tarea est´a esperando algo
+
+5. Cuando varias goroutinas no pueden ejecutar bloques de c´odigo simult´aneament
+
+6. Est´a causado por una cadena de dependencia circular entre subrutinas.
+
+7. Lock().
+
+8. for i := range ch1
+
+9. Permite que una subrutina espere en m´ultiples operaciones de comunicaci´on.
+
+10. La cl´ausula por defecto se ejecuta si todas las cl´ausulas case est´an bloqueadas. 
