@@ -3,19 +3,22 @@ package main
 import (
 	"fmt"
 	"strconv"
-	"strings"
 )
 
-func main(){
-	fmt.Println("Ingresa una lista de numeros separados por espacios")
-	var input string
-	fmt.Scanln(&input)
-	//input fijo para el debugger:
-	//input = "2 5 7 2 3 5 67 0 12 67 23 89 32 12 76"
-	split_input := strings.Split(input, " ")
-	arr := make([]int, len(split_input))
-	for i := 0; i < len(split_input); i++ {
-		arr[i], _ = strconv.Atoi(split_input[i])
+func main() {
+	fmt.Println("Ingresa una lista de numeros separados por ENTER")
+	// NOTA: para no ingresar más números basta con no ingresar nada.
+	var arr []int
+	var currNumber string
+	for i := 0; i < 16; i++ {
+		fmt.Scanln(&currNumber)
+		if currNumber == "" {
+			i += 16
+		} else {
+			currNumberInt, _ := strconv.Atoi(currNumber)
+			arr = append(arr, currNumberInt)
+			currNumber = ""
+		}
 	}
 	c1 := make(chan []int)
 	c2 := make(chan []int)
@@ -39,6 +42,7 @@ func main(){
 }
 
 func sortRoutine(arr []int, c chan []int) {
+	fmt.Println(arr)
 	quickSort(arr)
 	c <- arr
 }
