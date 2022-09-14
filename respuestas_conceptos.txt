@@ -6,13 +6,13 @@
 
 4. Una tarea puede ejecutarse mientras otra tarea est´a esperando algo
 
-5. Cuando varias goroutinas no pueden ejecutar bloques de c´odigo simult´aneament
+5. Cuando una  única goroutina es la  única que accede a una variable.
 
 6. Est´a causado por una cadena de dependencia circular entre subrutinas.
 
 7. Lock().
 
-8. for i := range ch1
+8. for i := ch1
 
 9. Permite que una subrutina espere en m´ultiples operaciones de comunicaci´on.
 
